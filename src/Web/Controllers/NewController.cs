@@ -29,6 +29,10 @@ namespace web.Controllers
       "<br><br> <a href='/New'>Go Back to New Page</a></body></html>";
       return Content(h, "text/html");
     }
+        public IActionResult CalculateOdd()
+        {
+            return View("/Views/New/CalculateOdd.cshtml");
+        }
 
     }
 }
