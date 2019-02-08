@@ -13,15 +13,21 @@ namespace UnitTests
             var actual = OddNum(a);
             Assert.Equal(outcome, actual);
         }
-
+        [Fact]
         public void Test2()
         {
-            var expected = 3;
-                var a = -3;
+            var expected = 15;
+                var a = -5;
             var actual = OddNum(a);
             Assert.Equal(expected, actual);
                
         }
+        [Theory]
+        [InlineData(-5, 15)]
+        public void Test3(int a, int b) { Assert.Equal(b, OddNum(a)); }
+
+
+
         int OddNum(int x)
         {
             var b = 1;
