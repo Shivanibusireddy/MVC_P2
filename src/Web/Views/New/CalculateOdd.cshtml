@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Calculate product of Odd numbers";
+}
+
+<h1> Calculate product of odd numbers</h1>
+
+
+
+
+<body>
+
+    Input value = <input type="text" id="val" name="oddvalue" />
+    <input type="button" name="Submit" value="product" onclick="javascript:cal()" />
+    <br />
+    Product of  odd numbers = <input type="text" id="sol" name="solution" />
+
+</body>
+
+<script language="javascript">
+    function cal() {
+        var val = parseInt(document.getElementById("val").value);
+        var sol = document.getElementById("sol");
+        var pro = 1;
+        if (val < 0) {
+            val = -val;
+        }
+        for (a = 1; a <=val; a++) {
+            if (a % 2 != 0) {
+                pro *= a;
+            }
+
+
+        }
+            sol.value = pro;
+
+               
+
+    }
+</script>
