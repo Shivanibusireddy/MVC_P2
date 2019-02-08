@@ -33,6 +33,10 @@ namespace web.Controllers
         {
             return View("/Views/New/CalculateOdd.cshtml");
         }
+        public IActionResult NewView()
+        {
+            return View();
+        }
 
     }
 }
